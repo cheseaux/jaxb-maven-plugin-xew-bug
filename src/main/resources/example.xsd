@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema
-  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-  elementFormDefault="qualified">
-
-  <xsd:element name="order">
-    <xsd:complexType>
-      <xsd:sequence>
-        <xsd:element ref="items" />
-      </xsd:sequence>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xsd:complexType name="order">
+        <xsd:sequence>
+            <xsd:element name="item" minOccurs="0" maxOccurs="unbounded">
+                <xsd:complexType>
+                    <xsd:attribute type="xsd:string" name="foo" use="required"/>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
     </xsd:complexType>
-  </xsd:element>
-
-  <xsd:element name="items">
-    <xsd:complexType>
-      <xsd:sequence>
-        <xsd:element name="item" type="xsd:string" maxOccurs="unbounded" />
-      </xsd:sequence>
-    </xsd:complexType>
-  </xsd:element>
 </xsd:schema>

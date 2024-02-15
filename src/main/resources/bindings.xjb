@@ -9,7 +9,7 @@
 	version="3.0">
 
 	<jaxb:bindings schemaLocation="example.xsd" node="/xs:schema">
-		<jaxb:bindings node="xs:element[@name='items']">
+		<jaxb:bindings node="xs:complexType[@name='order']">
 			<annox:annotateClass>@jakarta.xml.bind.annotation.XmlRootElement</annox:annotateClass>
 		</jaxb:bindings>
 	</jaxb:bindings>
